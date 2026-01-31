@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Sales Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-grid"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="icon">⚡</div>
+            <h1>EV Sales Intelligence</h1>
+            <p class="subtitle">Predictive analytics for electric vehicle markets worldwide</p>
+        </header>
+        
+        <form action="/predict" method="POST" id="predictionForm">
+            <div class="input-grid">
+                <div class="form-group">
+                    <label for="region">
+                        <span class="label-icon">🌍</span>
+                        Region
+                    </label>
+                    <select name="region" id="region" required>
+                        <option value="">Select Region</option>
+                        {% for region in regions %}
+                        <option value="{{ region }}" {% if selected_region == region %}selected{% endif %}>{{ region }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">
+                        <span class="label-icon">📅</span>
+                        Year
+                    </label>
+                    <select name="year" id="year" required>
+                        <option value="">Select Year</option>
+                        {% for year in years %}
+                        <option value="{{ year }}" {% if selected_year == year %}selected{% endif %}>{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">
+                        <span class="label-icon">📊</span>
+                        Category
+                        <span class="info-tooltip" id="categoryInfo">ⓘ</span>
+                    </label>
+                    <select name="category" id="category" required>
+                        <option value="">Select Category</option>
+                        {% for category in categories %}
+                        <option value="{{ category }}" {% if selected_category == category %}selected{% endif %}>{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="validation-message" id="categoryWarning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="powertrain">
+                        <span class="label-icon">🔋</span>
+                        Powertrain
+                    </label>
+                    <select name="powertrain" id="powertrain" required>
+                        <option value="">Select Powertrain</option>
+                        {% for powertrain in powertrains %}
+                        <option value="{{ powertrain }}" {% if selected_powertrain == powertrain %}selected{% endif %}>{{ powertrain }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <span class="btn-text">Generate Prediction</span>
+                <span class="btn-icon">→</span>
+            </button>
+        </form>
+
+        {% if prediction is defined %}
+        <div class="result-container">
+            {% if has_ground_truth %}
+                <div class="result verified">
+                    <div class="result-header">
+                        <span class="badge verified-badge">✓ Verified Data</span>
+                    </div>
+                    <div class="result-content">
+                        <div class="metric">
+                            <div class="metric-label">Predicted Sales</div>
+                            <div class="metric-value">{{ "{:,}".format(prediction) }}</div>
+                            <div class="metric-unit">vehicles</div>
+                        </div>
+                        {% if actual_value %}
+                        <div class="metric">
+                            <div class="metric-label">Actual Sales</div>
+                            <div class="metric-value">{{ "{:,}".format(actual_value) }}</div>
+                            <div class="metric-unit">vehicles</div>
+                        </div>
+                        <div class="accuracy-info">
+                            {% set error = ((prediction - actual_value) / actual_value * 100) %}
+                            {% if error >= 0 %}
+                            <span class="accuracy-badge">{{ "%.1f"|format(error) }}% above actual</span>
+                            {% else %}
+                            <span class="accuracy-badge">{{ "%.1f"|format(-error) }}% below actual</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="result extrapolated">
+                    <div class="result-header">
+                        <span class="badge extrapolated-badge">⚠ Extrapolated Prediction</span>
+                    </div>
+                    <div class="result-content">
+                        <div class="metric">
+                            <div class="metric-label">Predicted Sales</div>
+                            <div class="metric-value">{{ "{:,}".format(prediction) }}</div>
+                            <div class="metric-unit">vehicles</div>
+                        </div>
+                        <div class="warning-box">
+                            <strong>⚠️ No Ground Truth Data</strong>
+                            <p>This prediction is based on model extrapolation. The selected region-year-category combination doesn't exist in the training dataset.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error-box">
+            <strong>Error:</strong> {{ error }}
+        </div>
+        {% endif %}
+
+        <div class="info-panel" id="infoPanel">
+            <button class="close-btn" id="closeInfo">×</button>
+            <h3>Understanding Categories</h3>
+            <div class="info-content">
+                <div class="info-item">
+                    <strong>Historical</strong>
+                    <p>Actual recorded sales data from 2015-2023 for 51 countries worldwide.</p>
+                </div>
+                <div class="info-item">
+                    <strong>Projection-APS</strong>
+                    <p>Future projections (2020-2035) available only for China, Europe, India, USA, and Rest of the world.</p>
+                </div>
+                <div class="info-item">
+                    <strong>Projection-STEPS</strong>
+                    <p>Alternative future scenario projections (2020-2035) for the same 5 major regions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const validationMap = validation_map | safe;
+        
+        const regionSelect = document.getElementById('region');
+        const yearSelect = document.getElementById('year');
+        const categorySelect = document.getElementById('category');
+        const categoryWarning = document.getElementById('categoryWarning');
+        const categoryInfo = document.getElementById('categoryInfo');
+        const infoPanel = document.getElementById('infoPanel');
+        const closeInfo = document.getElementById('closeInfo');
+
+        function updateCategoryValidation() {
+            const region = regionSelect.value;
+            const year = yearSelect.value;
+            const category = categorySelect.value;
+
+            if (!region || !year) {
+                categoryWarning.textContent = '';
+                categoryWarning.className = 'validation-message';
+                return;
+            }
+
+            const key = `${region}|${year}`;
+            const validCategories = validationMap[key] || [];
+
+            if (validCategories.length === 0) {
+                categoryWarning.textContent = '⚠️ No data exists for this region-year combination. Prediction will be extrapolated.';
+                categoryWarning.className = 'validation-message warning';
+            } else if (category && !validCategories.includes(category)) {
+                categoryWarning.textContent = `⚠️ "${category}" data not available. Valid: ${validCategories.join(', ')}`;
+                categoryWarning.className = 'validation-message warning';
+            } else if (category && validCategories.includes(category)) {
+                categoryWarning.textContent = '✓ Verified data available for this combination';
+                categoryWarning.className = 'validation-message success';
+            } else {
+                categoryWarning.textContent = `ℹ️ Available categories: ${validCategories.join(', ')}`;
+                categoryWarning.className = 'validation-message info';
+            }
+        }
+
+        regionSelect.addEventListener('change', updateCategoryValidation);
+        yearSelect.addEventListener('change', updateCategoryValidation);
+        categorySelect.addEventListener('change', updateCategoryValidation);
+
+        categoryInfo.addEventListener('click', () => {
+            infoPanel.classList.add('active');
+        });
+
+        closeInfo.addEventListener('click', () => {
+            infoPanel.classList.remove('active');
+        });
+
+        // Initialize validation on page load
+        updateCategoryValidation();
+    </script>
+</body>
+</html>

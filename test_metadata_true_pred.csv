@@ -1,0 +1,238 @@
+region,year,category,powertrain,value
+Australia,2023,Historical,PHEV,11000
+Australia,2023,Historical,BEV,87000
+Australia,2023,Historical,FCEV,6
+Austria,2023,Historical,FCEV,9
+Austria,2023,Historical,BEV,48000
+Austria,2023,Historical,PHEV,17000
+Belgium,2023,Historical,PHEV,100000
+Belgium,2023,Historical,FCEV,9
+Belgium,2023,Historical,BEV,93000
+Brazil,2023,Historical,BEV,19000
+Brazil,2023,Historical,PHEV,33000
+Bulgaria,2023,Historical,PHEV,360
+Bulgaria,2023,Historical,BEV,1800
+Canada,2023,Historical,PHEV,41000
+Canada,2023,Historical,BEV,130000
+Canada,2023,Historical,FCEV,13
+Chile,2023,Historical,PHEV,510
+Chile,2023,Historical,BEV,410
+China,2023,Projection-STEPS,PHEV,2700000
+China,2023,Projection-STEPS,FCEV,520
+China,2023,Projection-STEPS,BEV,5400000
+China,2023,Projection-APS,FCEV,520
+China,2023,Projection-APS,BEV,5400000
+China,2023,Historical,FCEV,520
+China,2023,Historical,PHEV,2700000
+China,2023,Historical,BEV,5400000
+China,2023,Projection-APS,PHEV,2700000
+Colombia,2023,Historical,BEV,3600
+Colombia,2023,Historical,PHEV,2500
+Costa Rica,2023,Historical,BEV,4900
+Croatia,2023,Historical,BEV,1600
+Croatia,2023,Historical,PHEV,990
+Cyprus,2023,Historical,PHEV,510
+Cyprus,2023,Historical,BEV,790
+Czech Republic,2023,Historical,PHEV,5300
+Czech Republic,2023,Historical,BEV,6700
+Denmark,2023,Historical,BEV,63000
+Denmark,2023,Historical,FCEV,1
+Denmark,2023,Historical,PHEV,17000
+Estonia,2023,Historical,BEV,1400
+Estonia,2023,Historical,PHEV,560
+EU27,2023,Historical,PHEV,850000
+EU27,2023,Historical,FCEV,770
+EU27,2023,Historical,BEV,1600000
+Europe,2023,Projection-APS,PHEV,1100000
+Europe,2023,Projection-APS,FCEV,820
+Europe,2023,Projection-APS,BEV,2200000
+Europe,2023,Projection-STEPS,PHEV,1100000
+Europe,2023,Projection-STEPS,FCEV,820
+Europe,2023,Projection-STEPS,BEV,2200000
+Europe,2023,Historical,PHEV,1100000
+Europe,2023,Historical,FCEV,820
+Europe,2023,Historical,BEV,2200000
+Finland,2023,Historical,PHEV,18000
+Finland,2023,Historical,BEV,30000
+France,2023,Historical,BEV,310000
+France,2023,Historical,FCEV,310
+France,2023,Historical,PHEV,160000
+Germany,2023,Historical,FCEV,260
+Germany,2023,Historical,BEV,520000
+Germany,2023,Historical,PHEV,180000
+Greece,2023,Historical,BEV,7000
+Greece,2023,Historical,PHEV,10000
+Hungary,2023,Historical,PHEV,5500
+Hungary,2023,Historical,BEV,5800
+Iceland,2023,Historical,BEV,10000
+Iceland,2023,Historical,FCEV,1
+Iceland,2023,Historical,PHEV,2400
+India,2023,Projection-APS,PHEV,270
+India,2023,Projection-APS,BEV,82000
+India,2023,Projection-STEPS,PHEV,270
+India,2023,Projection-STEPS,BEV,82000
+India,2023,Historical,BEV,82000
+India,2023,Historical,PHEV,270
+Ireland,2023,Historical,BEV,23000
+Ireland,2023,Historical,PHEV,10000
+Israel,2023,Historical,PHEV,16000
+Israel,2023,Historical,BEV,49000
+Italy,2023,Historical,BEV,66000
+Italy,2023,Historical,FCEV,2
+Italy,2023,Historical,PHEV,70000
+Japan,2023,Historical,FCEV,320
+Japan,2023,Historical,BEV,88000
+Japan,2023,Historical,PHEV,52000
+Korea,2023,Historical,BEV,120000
+Korea,2023,Historical,FCEV,4300
+Korea,2023,Historical,PHEV,12000
+Latvia,2023,Historical,PHEV,360
+Latvia,2023,Historical,BEV,1700
+Lithuania,2023,Historical,BEV,2100
+Luxembourg,2023,Historical,PHEV,4800
+Luxembourg,2023,Historical,BEV,11000
+Mexico,2023,Historical,BEV,13000
+Mexico,2023,Historical,PHEV,2200
+Netherlands,2023,Historical,FCEV,65
+Netherlands,2023,Historical,BEV,130000
+Netherlands,2023,Historical,PHEV,80000
+New Zealand,2023,Historical,BEV,26000
+New Zealand,2023,Historical,PHEV,12000
+New Zealand,2023,Historical,FCEV,4
+Norway,2023,Historical,BEV,100000
+Norway,2023,Historical,FCEV,6
+Norway,2023,Historical,PHEV,10000
+Poland,2023,Historical,FCEV,83
+Poland,2023,Historical,PHEV,13000
+Poland,2023,Historical,BEV,17000
+Portugal,2023,Historical,FCEV,2
+Portugal,2023,Historical,BEV,36000
+Portugal,2023,Historical,PHEV,27000
+Rest of the world,2023,Historical,PHEV,26000
+Rest of the world,2023,Projection-APS,PHEV,200000
+Rest of the world,2023,Projection-APS,FCEV,4600
+Rest of the world,2023,Projection-APS,BEV,690000
+Rest of the world,2023,Projection-STEPS,BEV,690000
+Rest of the world,2023,Projection-STEPS,PHEV,200000
+Rest of the world,2023,Projection-STEPS,FCEV,4600
+Rest of the world,2023,Historical,BEV,100000
+Romania,2023,Historical,BEV,15000
+Seychelles,2023,Historical,BEV,100
+Slovakia,2023,Historical,BEV,2300
+Slovakia,2023,Historical,PHEV,3000
+Slovenia,2023,Historical,BEV,4300
+Slovenia,2023,Historical,PHEV,1000
+South Africa,2023,Historical,PHEV,270
+South Africa,2023,Historical,BEV,810
+Spain,2023,Historical,BEV,57000
+Spain,2023,Historical,PHEV,65000
+Spain,2023,Historical,FCEV,4
+Sweden,2023,Historical,PHEV,61000
+Sweden,2023,Historical,FCEV,2
+Sweden,2023,Historical,BEV,110000
+Switzerland,2023,Historical,BEV,53000
+Switzerland,2023,Historical,FCEV,27
+Switzerland,2023,Historical,PHEV,23000
+Turkiye,2023,Historical,PHEV,2700
+Turkiye,2023,Historical,BEV,66000
+United Arab Emirates,2023,Historical,PHEV,5900
+United Arab Emirates,2023,Historical,BEV,23000
+United Kingdom,2023,Historical,PHEV,140000
+United Kingdom,2023,Historical,FCEV,25
+United Kingdom,2023,Historical,BEV,310000
+USA,2023,Projection-APS,PHEV,290000
+USA,2023,Projection-APS,FCEV,3000
+USA,2023,Projection-APS,BEV,1100000
+USA,2023,Projection-STEPS,PHEV,290000
+USA,2023,Projection-STEPS,FCEV,3000
+USA,2023,Projection-STEPS,BEV,1100000
+USA,2023,Historical,BEV,1100000
+USA,2023,Historical,FCEV,3000
+USA,2023,Historical,PHEV,290000
+China,2025,Projection-STEPS,BEV,7600000
+China,2025,Projection-STEPS,FCEV,8000
+China,2025,Projection-STEPS,PHEV,3400000
+China,2025,Projection-APS,BEV,8300000
+China,2025,Projection-APS,FCEV,27000
+China,2025,Projection-APS,PHEV,2600000
+Europe,2025,Projection-APS,BEV,3600000
+Europe,2025,Projection-APS,FCEV,5800
+Europe,2025,Projection-APS,PHEV,1100000
+Europe,2025,Projection-STEPS,BEV,3300000
+Europe,2025,Projection-STEPS,FCEV,3800
+Europe,2025,Projection-STEPS,PHEV,1500000
+India,2025,Projection-STEPS,BEV,320000
+India,2025,Projection-STEPS,PHEV,4200
+India,2025,Projection-APS,BEV,390000
+India,2025,Projection-APS,FCEV,44
+India,2025,Projection-APS,PHEV,9600
+Rest of the world,2025,Projection-APS,BEV,1600000
+Rest of the world,2025,Projection-APS,FCEV,68000
+Rest of the world,2025,Projection-APS,PHEV,450000
+Rest of the world,2025,Projection-STEPS,BEV,1300000
+Rest of the world,2025,Projection-STEPS,FCEV,26000
+Rest of the world,2025,Projection-STEPS,PHEV,370000
+USA,2025,Projection-APS,BEV,2600000
+USA,2025,Projection-APS,FCEV,3800
+USA,2025,Projection-APS,PHEV,470000
+USA,2025,Projection-STEPS,BEV,2500000
+USA,2025,Projection-STEPS,FCEV,3800
+USA,2025,Projection-STEPS,PHEV,560000
+China,2030,Projection-APS,BEV,15000000
+China,2030,Projection-APS,FCEV,110000
+China,2030,Projection-APS,PHEV,2500000
+China,2030,Projection-STEPS,BEV,15000000
+China,2030,Projection-STEPS,FCEV,33000
+China,2030,Projection-STEPS,PHEV,2900000
+Europe,2030,Projection-STEPS,BEV,6800000
+Europe,2030,Projection-STEPS,FCEV,4900
+Europe,2030,Projection-STEPS,PHEV,2400000
+Europe,2030,Projection-APS,BEV,7400000
+Europe,2030,Projection-APS,FCEV,10000
+Europe,2030,Projection-APS,PHEV,1900000
+India,2030,Projection-STEPS,BEV,1000000
+India,2030,Projection-STEPS,PHEV,6500
+India,2030,Projection-APS,BEV,1800000
+India,2030,Projection-APS,FCEV,770
+India,2030,Projection-APS,PHEV,17000
+Rest of the world,2030,Projection-STEPS,BEV,3600000
+Rest of the world,2030,Projection-STEPS,FCEV,50000
+Rest of the world,2030,Projection-STEPS,PHEV,750000
+Rest of the world,2030,Projection-APS,BEV,5900000
+Rest of the world,2030,Projection-APS,FCEV,190000
+Rest of the world,2030,Projection-APS,PHEV,1400000
+USA,2030,Projection-STEPS,BEV,7200000
+USA,2030,Projection-APS,BEV,7400000
+USA,2030,Projection-APS,FCEV,8600
+USA,2030,Projection-APS,PHEV,1400000
+USA,2030,Projection-STEPS,FCEV,8700
+USA,2030,Projection-STEPS,PHEV,1600000
+China,2035,Projection-STEPS,BEV,20000000
+China,2035,Projection-STEPS,FCEV,70000
+China,2035,Projection-STEPS,PHEV,2100000
+China,2035,Projection-APS,BEV,20000000
+China,2035,Projection-APS,FCEV,360000
+China,2035,Projection-APS,PHEV,1800000
+Europe,2035,Projection-APS,BEV,14000000
+Europe,2035,Projection-APS,FCEV,28000
+Europe,2035,Projection-APS,PHEV,35000
+Europe,2035,Projection-STEPS,BEV,13000000
+Europe,2035,Projection-STEPS,FCEV,10000
+Europe,2035,Projection-STEPS,PHEV,620000
+India,2035,Projection-APS,BEV,4000000
+India,2035,Projection-APS,FCEV,6800
+India,2035,Projection-APS,PHEV,3400
+India,2035,Projection-STEPS,BEV,1700000
+India,2035,Projection-STEPS,PHEV,9000
+Rest of the world,2035,Projection-APS,BEV,15000000
+Rest of the world,2035,Projection-APS,FCEV,470000
+Rest of the world,2035,Projection-APS,PHEV,2000000
+Rest of the world,2035,Projection-STEPS,BEV,6400000
+Rest of the world,2035,Projection-STEPS,FCEV,99000
+Rest of the world,2035,Projection-STEPS,PHEV,960000
+USA,2035,Projection-STEPS,BEV,9300000
+USA,2035,Projection-STEPS,FCEV,21000
+USA,2035,Projection-STEPS,PHEV,1900000
+USA,2035,Projection-APS,BEV,9500000
+USA,2035,Projection-APS,FCEV,21000
+USA,2035,Projection-APS,PHEV,1600000
